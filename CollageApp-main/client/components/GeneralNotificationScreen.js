@@ -1,7 +1,8 @@
+//General Notification.js
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const GeneralNotificationScreen = () => {
+const GeneralNotificationScreen = ({ setUnreadGeneralNotifications }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>General Notifications</Text>
@@ -14,6 +15,9 @@ const GeneralNotificationScreen = () => {
       <View style={styles.notification}>
         <Text style={styles.notificationText}>Notification 3</Text>
       </View>
+      <TouchableOpacity onPress={() => setUnreadGeneralNotifications(0)} style={styles.markAsReadButton}>
+        <Text style={styles.markAsReadText}>Mark as read</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -37,6 +41,16 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   notificationText: {
+    fontSize: 16,
+  },
+  markAsReadButton: {
+    backgroundColor: "blue",
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 20,
+  },
+  markAsReadText: {
+    color: "white",
     fontSize: 16,
   },
 });

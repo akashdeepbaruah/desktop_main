@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   badgeContainer: {
-    position: absolute,
+    position: 'absolute',
     top: -5,
     right: -5,
     backgroundColor: 'red',
